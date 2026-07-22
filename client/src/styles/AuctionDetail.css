@@ -1,0 +1,159 @@
+.auction-detail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.auction-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auction-info {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tiktok-embed {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tiktok-embed iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.auction-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.current-bid {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bid-amount {
+  font-size: 2.5em;
+  color: #25f4ee;
+  font-weight: bold;
+}
+
+.bid-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bid-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.bid-form button {
+  padding: 12px;
+  background: #25f4ee;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bid-form button:hover {
+  background: #1dd1b0;
+}
+
+.bid-history {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bid-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bid-history li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9em;
+}
+
+.auction-chat {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  min-height: 300px;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.chat-form button {
+  padding: 10px 20px;
+  background: #25f4ee;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .auction-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .tiktok-embed iframe {
+    height: 300px;
+  }
+}

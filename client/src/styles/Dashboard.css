@@ -1,0 +1,51 @@
+.dashboard {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.dashboard h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.auction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auction-form input,
+.auction-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.auction-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.auction-form button {
+  padding: 12px;
+  background: #25f4ee;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auction-form button:hover {
+  background: #1dd1b0;
+  transform: scale(1.02);
+}
