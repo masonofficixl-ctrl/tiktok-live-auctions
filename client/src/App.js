@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import io from 'socket.io-client';
 import AuctionList from './pages/AuctionList';
 import AuctionDetail from './pages/AuctionDetail';
 import Dashboard from './pages/Dashboard';
+import JokeGenerator from './pages/JokeGenerator';
 import './App.css';
-
-const socket = io('http://localhost:5000');
 
 function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Check for logged in user
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       setUser(JSON.parse(storedUser));
@@ -23,9 +20,10 @@ function App() {
     <Router>
       <div className="app">
         <header className="header">
-          <h1>🎯 TikTok Live Auctions</h1>
+          <h1>🎭 TikTok Live + Jokes</h1>
           <nav>
-            <a href="/">Home</a>
+            <a href="/">Auctions</a>
+            <a href="/jokes">Jokes</a>
             <a href="/dashboard">Dashboard</a>
             {user ? (
               <span>{user.username}</span>
@@ -36,9 +34,10 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<AuctionList socket={socket} />} />
-          <Route path="/auction/:id" element={<AuctionDetail socket={socket} user={user} />} />
-          <Route path="/dashboard" element={<Dashboard socket={socket} user={user} />} />
+          <Route path="/" element={<AuctionList />} />
+          <Route path="/auction/:id" element={<AuctionDetail user={user} />} />
+          <Route path="/jokes" element={<JokeGenerator />} />
+          <Route path="/dashboard" element={<Dashboard user={user} />} />
         </Routes>
       </div>
     </Router>
